@@ -46,7 +46,7 @@ export default function App() {
     { title: '读懂中国共产党', publisher: '北京联合出版公司', collections: '哈佛大学，普林斯顿大学，布朗大学，耶鲁大学，斯坦福大学，纽约大学，香港中文大学，巴伐利亚州立图书馆', isbn: '9781487812355' },
     { title: '中国票据简史', publisher: '中国金融出版社', collections: '', isbn: '9781487813345' },
     { title: '资源生成与经济增长：兼论有为政府行为准则', publisher: '北京大学出版社', collections: '', isbn: '9781487813437' },
-    { title: '中国司法制度的基础理论问题研究', publisher: '经济科学出版社', collections: '', tag: '教育部哲学社会科学研究重大课题攻关项目成果', isbn: '' },
+    { title: '中国司法制度的基础理论问题研究', publisher: '经济科学出版社', collections: '', tag: '教育部哲学社会科学研究重大课题攻关项目成果', isbn: '本项目仅编辑' },
     { title: '地图上的中国历史（四册）', publisher: '江苏人民出版社', collections: '', tag: '经典中国工程', isbn: '9781487809355 9781487809348 9781487809362 9781487809379' },
     { title: '丝绸之路十八讲', publisher: '江西人民出版社', collections: '', tag: '丝路书香工程', isbn: '9781487813918' },
     { title: '中国海洋文化遗产保护研究', publisher: '福建教育出版社', collections: '', tag: '国家出版基金项目 & 教育部人文社会科学重点研究基地重大项目', isbn: '9781487813857' },
@@ -68,7 +68,7 @@ export default function App() {
     { title: '万里长城在哪里', publisher: '中信出版集团', collections: '', tag: '经典中国工程', isbn: '9781487813901' },
     { title: '故宫里的大怪兽', publisher: '大百科全书出版社', collections: '多佛公共图书馆，迈阿密戴德公共图书馆', tag: '经典中国工程', isbn: '9781487812775' },
     { title: '桦皮船', publisher: '安徽少儿出版社', collections: '', tag: '“十四五”国家重点出版物出版专项规划项目 & 中国作家协会重点作品扶持项目', isbn: '9781487812966' },
-    { title: '盗墓笔记（磨铁版）', publisher: '人民大学出版社', collections: '', isbn: '' },
+    { title: '盗墓笔记（磨铁版）', publisher: '人民大学出版社', collections: '', isbn: '本项目仅编辑' },
     { title: '世界文学之都：南京', publisher: '南京出版社', collections: '哈佛大学，普林斯顿大学，哥伦比亚大学，费城免费图书馆，旧金山公共图书馆，密苏拉公共图书馆', tag: '亚洲经典著作互译计划', isbn: '9781487811327' },
     { title: '我和小素', publisher: '安徽少儿出版社', collections: '', tag: '优秀现实题材文学出版工程', isbn: '9781487812423' },
     { title: '这就是村 BA', publisher: '贵州人民出版社', collections: '', tag: '贵州省出版传媒事业发展专项资金资助项目', isbn: '9781487813413' },
@@ -110,7 +110,7 @@ export default function App() {
     { title: '现代儒家哲学研究', publisher: '北京大学出版社', collections: '哈佛大学，普林斯顿大学，斯坦福大学，布朗大学，宾夕法尼亚大学，芝加哥大学，纽约大学，香港中文大学，香港科技大学，悉尼大学', tag: '经典中国工程 · 指导编校', isbn: '9781487812027' },
     { title: '超级杂交水稻亩产 900 千克栽培新技术', publisher: '湖南科技出版社（袁隆平团队）', collections: '哈佛大学，普林斯顿大学，哥伦比亚大学，加州大学戴维斯分校', tag: '国家出版基金项目 & 中国图书对外推广计划 · 指导编校', isbn: '9781487813048' },
     { title: '中华人民共和国改革开放史（1978–2021）', publisher: '人民大学出版社', collections: '哈佛大学，普林斯顿大学，斯坦福大学，纽约大学，香港中文大学，香港科技大学，悉尼大学', tag: '指导编校', isbn: '9781487810795' },
-    { title: '中国挖泥船研发史', publisher: '上海交通大学出版社', collections: '', tag: '指导编校（Springer 出版）', isbn: '' },
+    { title: '中国挖泥船研发史', publisher: '上海交通大学出版社', collections: '', tag: '指导编校（Springer 出版）', isbn: '本项目仅编辑，Springer出版' },
     { title: '长城：追问与共鸣', publisher: '燕山大学出版社', collections: '纽约大学，加利福尼亚大学，香港中文大学，乔治梅森大学，俄克拉荷马大学', tag: '指导编校', isbn: '9781487813260' },
     { title: '革命与先驱—早期革命者的家国情怀与历史形象', publisher: '中国社会科学出版社', collections: '', tag: '指导编校', isbn: '' },
     { title: 'Visualized Gender and Gendered Visuality: Contemporary Chinese\nWomen\'s Visual Culture', publisher: '英文原版，作者姚玲玲', collections: '', tag: '指导编校', isbn: '' },
@@ -130,12 +130,12 @@ export default function App() {
     { title: '一滴水的奇妙之旅', publisher: '河海大学出版社', collections: '迈阿密戴德公共图书馆系统，盐湖县图书馆', tag: '“十四五”江苏省重点出版物出版专项规划项目 · 指导编校', isbn: '9781487813024' },
     { title: '马兰的歌声', publisher: '安徽少儿出版社', collections: '多伦多公共图书馆', tag: '指导编校', isbn: '9781487811754' },
     { title: '人类与千年洪水', publisher: '科学普及出版社', collections: '', tag: '指导编校', isbn: '9781487813826' },
-    { title: '历代名医故事 绘本', publisher: '上海科学技术出版社', collections: '', tag: '指导编校', isbn: '' },
+    { title: '历代名医故事 绘本', publisher: '上海科学技术出版社', collections: '', tag: '指导编校', isbn: '9781487814076' },
     // --- 艺术 ---
-    { title: '中国长城', publisher: '燕山大学出版社', collections: '', tag: '国家出版基金项目 · 指导编校', isbn: '' },
+    { title: '中国长城', publisher: '燕山大学出版社', collections: '', tag: '国家出版基金项目 · 指导编校', isbn: '9781487814045' },
     { title: '狞厉与肃穆：中国古代青铜器的纹样', publisher: '浙江古籍出版社', collections: '', tag: '指导编校', isbn: '9781487813963' },
-    { title: '什么是青海', publisher: '青海人民出版社', collections: '', tag: '指导编校', isbn: '' },
-    { title: '西南民间艺术珍藏·蜡染', publisher: '贵州教育出版社', collections: '', tag: '贵州省出版传媒事业发展专项资金资助 · 指导编校', isbn: '' },
+    { title: '什么是青海', publisher: '青海人民出版社', collections: '', tag: '指导编校', isbn: '9781487814090' },
+    { title: '西南民间艺术珍藏·蜡染', publisher: '贵州教育出版社', collections: '', tag: '贵州省出版传媒事业发展专项资金资助 · 指导编校', isbn: '9781487814069' },
   ];
 
   const filteredProjects = projects.filter(p =>
@@ -150,19 +150,26 @@ export default function App() {
   // Check if a title is English (for alignment)
   const isEnglish = (title: string) => /^[A-Za-z0-9\s\:\;\,\-\(\)\.]+$/.test(title);
 
-  // Render ISBN display with WorldCat link, supports multi-volume sets
+  // Render ISBN display with WorldCat link, supports multi-volume sets and text notes
   const renderIsbn = (isbn: string) => {
-    const isbns = isbn.split(' ');
-    const firstIsbn = isbns[0];
-    const displayIsbns = isbns.join(', ');
-    return (
-      <>
-        <a href={`https://www.worldcat.org/isbn/${firstIsbn}`} target="_blank" rel="noreferrer" className="flex items-center hover:text-accent text-[11px]">
-          <ExternalLink className="w-3 h-3 mr-1" /> WorldCat
-        </a>
-        <span className="text-ink/30 text-[10px] font-mono">ISBN {displayIsbns}</span>
-      </>
-    );
+    const isRealIsbn = /^[0-9\s]+$/.test(isbn.trim());
+    if (isRealIsbn) {
+      const isbns = isbn.split(' ');
+      const firstIsbn = isbns[0];
+      const displayIsbns = isbns.join(', ');
+      return (
+        <>
+          <a href={`https://www.worldcat.org/isbn/${firstIsbn}`} target="_blank" rel="noreferrer" className="flex items-center hover:text-accent text-[11px]">
+            <ExternalLink className="w-3 h-3 mr-1" /> WorldCat
+          </a>
+          <span className="text-ink/30 text-[10px] font-mono">ISBN {displayIsbns}</span>
+        </>
+      );
+    } else {
+      return (
+        <span className="text-ink/50 text-[10px] font-mono">{isbn}</span>
+      );
+    }
   };
 
   const independentProjects = filteredProjects.filter(p => !p.tag?.includes('指导编校'));
