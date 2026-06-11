@@ -259,8 +259,8 @@ function checkMissingSpaces() {
                 International Publishing & Cultural Archiving
               </p>
               <p className="text-sm md:text-base font-mono max-w-2xl leading-relaxed text-ink/80">
-                3 年全流程出版经验，精通 CMOS 等国际标准 。<br/>
-                主理 120+ 部著作进入常春藤及美国总统行政办公室等顶尖馆藏；100% 助力 20+ 项国家级"走出去"工程高质结项 。
+                3年内容产品全链路经验，精通CMOS等国际标准。<br/>
+                主理120+部知识产品进入哈佛、耶鲁、普林斯顿及美国总统行政办公室等顶尖馆藏，100%助力20+项国家级"走出去"工程高质结项。深度应用LLMs实现生产效能提升30%+。
               </p>
             </div>
           </div>
