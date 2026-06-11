@@ -25,6 +25,9 @@ export default function App() {
     return `${date.getFullYear()}.${(date.getMonth() + 1).toString().padStart(2, '0')}.${date.getDate().toString().padStart(2, '0')}`;
   };
 
+  const baseUrl = import.meta.env.BASE_URL;
+  const imgUrl = (path: string) => `${baseUrl}${path}`;
+
   const handleScrollToArchive = () => {
     setIsArchiveOpen(true);
     setTimeout(() => {
@@ -304,7 +307,7 @@ function checkMissingSpaces() {
             {/* Item 1 */}
             <div className="group cursor-pointer flex flex-col h-full">
               <div className="bg-white p-1 border border-ink/20 shadow-sm aspect-[3/4] mb-3 overflow-hidden relative dreamcore-cover transition-transform duration-500 group-hover:-translate-y-1">
-                <img src="/早期中国.jpg" alt="早期中国" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000" />
+                <img src={imgUrl('早期中国.jpg')} alt="早期中国" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000" />
               </div>
               <div className="flex-grow flex flex-col justify-between">
                 <div className="flex flex-col justify-between min-h-[5rem] md:min-h-[7rem]">
@@ -320,7 +323,7 @@ function checkMissingSpaces() {
             {/* Item 2 - Tilted */}
             <div className="group cursor-pointer md:translate-y-6 flex flex-col h-full">
               <div className="bg-white p-1 border border-ink/20 shadow-sm aspect-[3/4] mb-3 overflow-hidden relative dreamcore-cover transition-transform duration-500 transform rotate-2 group-hover:-translate-y-1 group-hover:rotate-2 group-hover:shadow-md">
-                <img src="/号角.jpg" alt="号角—红色印刷记忆" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000" />
+                <img src={imgUrl('号角.jpg')} alt="号角—红色印刷记忆" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000" />
               </div>
               <div className="flex-grow flex flex-col justify-between">
                 <div className="flex flex-col justify-between min-h-[5rem] md:min-h-[7rem]">
@@ -336,7 +339,7 @@ function checkMissingSpaces() {
             {/* Item 3 - Rollback to Nanjing */}
             <div className="group cursor-pointer flex flex-col h-full">
               <div className="bg-white p-1 border border-ink/20 shadow-sm aspect-[3/4] mb-3 overflow-hidden relative dreamcore-cover transition-transform duration-500 group-hover:-translate-y-1">
-                <img src="/南京.jpg" alt="世界文学之都：南京" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000" />
+                <img src={imgUrl('南京.jpg')} alt="世界文学之都：南京" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000" />
               </div>
               <div className="flex-grow flex flex-col justify-between">
                 <div className="flex flex-col justify-between min-h-[5rem] md:min-h-[7rem]">
@@ -367,7 +370,7 @@ function checkMissingSpaces() {
               <div className="polaroid p-2 pb-8">
                 <div className="relative overflow-hidden bg-white">
                   <video
-                    src="/vibecho-demo.mp4"
+                    src={imgUrl('vibecho-demo.mp4')}
                     controls
                     preload="metadata"
                     playsInline
@@ -417,14 +420,14 @@ function checkMissingSpaces() {
               <a href="https://ai.studio/apps/aaaa9f8f-3a94-4f77-9419-a3563657db4f" target="_blank" rel="noreferrer" className="polaroid block p-2 pb-8">
                 <div className="relative overflow-hidden bg-white">
                   <div className="grid grid-cols-2 gap-0.5">
-                    <a href="/future-pulse-1.png" target="_blank" rel="noreferrer" className="col-span-2">
-                      <img src="/future-pulse-1.png" alt="Future Pulse" className="w-full h-full object-cover max-h-36 md:max-h-48 hover:opacity-90 transition-opacity" />
+                    <a href={imgUrl('future-pulse-1.png')} target="_blank" rel="noreferrer" className="col-span-2">
+                      <img src={imgUrl('future-pulse-1.png')} alt="Future Pulse" className="w-full h-full object-cover max-h-36 md:max-h-48 hover:opacity-90 transition-opacity" />
                     </a>
-                    <a href="/future-pulse-2.png" target="_blank" rel="noreferrer">
-                      <img src="/future-pulse-2.png" alt="Future Pulse" className="w-full h-20 md:h-28 object-cover hover:opacity-90 transition-opacity" />
+                    <a href={imgUrl('future-pulse-2.png')} target="_blank" rel="noreferrer">
+                      <img src={imgUrl('future-pulse-2.png')} alt="Future Pulse" className="w-full h-20 md:h-28 object-cover hover:opacity-90 transition-opacity" />
                     </a>
-                    <a href="/future-pulse-3.png" target="_blank" rel="noreferrer">
-                      <img src="/future-pulse-3.png" alt="Future Pulse" className="w-full h-20 md:h-28 object-cover hover:opacity-90 transition-opacity" />
+                    <a href={imgUrl('future-pulse-3.png')} target="_blank" rel="noreferrer">
+                      <img src={imgUrl('future-pulse-3.png')} alt="Future Pulse" className="w-full h-20 md:h-28 object-cover hover:opacity-90 transition-opacity" />
                     </a>
                   </div>
                 </div>
@@ -443,7 +446,7 @@ function checkMissingSpaces() {
             {/* Card 4: 书法识文 */}
             <div className="flex flex-col gap-3 group">
               <div className="border border-ink/20 overflow-hidden bg-white">
-                <img src="/calligraphy-1.png" alt="书法识文" className="w-full object-cover group-hover:scale-[1.02] transition-all duration-700" />
+                <img src={imgUrl('calligraphy-1.png')} alt="书法识文" className="w-full object-cover group-hover:scale-[1.02] transition-all duration-700" />
               </div>
               <div className="font-mono text-xs text-ink/80 leading-relaxed bg-ink/5 p-3 border border-ink/10">
                 <strong className="text-ink">书法拍照 OCR 识别：</strong> 拍照或上传图片，自动裁剪并识别书法作品中的文字，支持编辑、复制与历史记录。
