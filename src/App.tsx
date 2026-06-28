@@ -33,17 +33,17 @@ export default function App() {
   const previewData: Record<string, { label: string; images: string[] }[]> = {
     'early-china': [
       { label: 'Contents', images: ['early-china-contents-1.png', 'early-china-contents-2.png', 'early-china-contents-3.png'] },
-      { label: 'List of Figures', images: ['early-china-figures-1.png', 'early-china-figures-2.png', 'early-china-figures-3.png'] },
+      { label: 'List of Figures', images: ['early-china-figures-1.png', 'early-china-figures-2.png'] },
       { label: 'List of Tables', images: ['early-china-tables-1.png'] },
-      { label: 'Foreword', images: ['early-china-foreword-1.png', 'early-china-foreword-2.png', 'early-china-foreword-3.png', 'early-china-foreword-4.png', 'early-china-foreword-5.png'] },
+      { label: 'Foreword', images: ['early-china-foreword-1.png', 'early-china-foreword-2.png', 'early-china-foreword-3.png', 'early-china-foreword-4.png'] },
     ],
     'haojiao': [
       { label: 'Contents', images: ['haojiao-contents-1.png', 'haojiao-contents-2.png', 'haojiao-contents-3.png', 'haojiao-contents-4.png'] },
-      { label: 'Preface', images: ['haojiao-preface-1.png', 'haojiao-preface-2.png', 'haojiao-preface-3.png', 'haojiao-preface-4.png', 'haojiao-preface-5.png', 'haojiao-preface-6.png'] },
+      { label: 'Preface', images: ['haojiao-preface-1.png', 'haojiao-preface-2.png', 'haojiao-preface-3.png', 'haojiao-preface-4.png'] },
     ],
     'nanjing': [
-      { label: 'Contents', images: ['nanjing-contents-1.png', 'nanjing-contents-2.png', 'nanjing-contents-3.png'] },
-      { label: 'Preface', images: ['nanjing-preface-1.png', 'nanjing-preface-2.png', 'nanjing-preface-3.png', 'nanjing-preface-4.png'] },
+      { label: 'Contents', images: ['nanjing-contents-1.png', 'nanjing-contents-2.png'] },
+      { label: 'Preface', images: ['nanjing-preface-1.png', 'nanjing-preface-2.png'] },
     ],
   };
 
@@ -522,14 +522,6 @@ function checkMissingSpaces() {
                   </div>
 
                   <div className="space-y-0 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
-                    {!searchQuery && (
-                      <div className="bg-ink/5 px-8 py-3 -mx-4 md:-mx-8 border-b border-ink/20">
-                        <h3 className="font-mono text-xs uppercase tracking-widest text-ink/70 font-semibold">
-                          <span className="inline-block w-2 h-2 rounded-full bg-accent mr-2"></span>
-                          独立编校项目
-                        </h3>
-                      </div>
-                    )}
                     {independentProjects.map((p, i) => (
                       <div key={'ind-' + i} className="group flex flex-col md:flex-row md:items-start border-b border-ink/10 py-4 hover:bg-ink/5 transition-colors -mx-4 px-4 md:-mx-8 md:px-8">
                         <div className="font-mono text-xs text-ink/40 w-12 shrink-0 pt-1">{projects.indexOf(p).toString().padStart(3, '0')}</div>
