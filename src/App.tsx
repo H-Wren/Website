@@ -28,6 +28,25 @@ export default function App() {
   const baseUrl = import.meta.env.BASE_URL;
   const imgUrl = (path: string) => `${baseUrl}${path}`;
 
+  const [previewBook, setPreviewBook] = useState<string | null>(null);
+
+  const previewData: Record<string, { label: string; images: string[] }[]> = {
+    'early-china': [
+      { label: 'Contents', images: ['early-china-contents-1.png', 'early-china-contents-2.png', 'early-china-contents-3.png'] },
+      { label: 'List of Figures', images: ['early-china-figures-1.png', 'early-china-figures-2.png', 'early-china-figures-3.png'] },
+      { label: 'List of Tables', images: ['early-china-tables-1.png'] },
+      { label: 'Foreword', images: ['early-china-foreword-1.png', 'early-china-foreword-2.png', 'early-china-foreword-3.png', 'early-china-foreword-4.png', 'early-china-foreword-5.png'] },
+    ],
+    'haojiao': [
+      { label: 'Contents', images: ['haojiao-contents-1.png', 'haojiao-contents-2.png', 'haojiao-contents-3.png', 'haojiao-contents-4.png'] },
+      { label: 'Preface', images: ['haojiao-preface-1.png', 'haojiao-preface-2.png', 'haojiao-preface-3.png', 'haojiao-preface-4.png', 'haojiao-preface-5.png', 'haojiao-preface-6.png'] },
+    ],
+    'nanjing': [
+      { label: 'Contents', images: ['nanjing-contents-1.png', 'nanjing-contents-2.png', 'nanjing-contents-3.png'] },
+      { label: 'Preface', images: ['nanjing-preface-1.png', 'nanjing-preface-2.png', 'nanjing-preface-3.png', 'nanjing-preface-4.png'] },
+    ],
+  };
+
   const handleScrollToArchive = () => {
     setIsArchiveOpen(true);
     setTimeout(() => {
@@ -314,8 +333,13 @@ function checkMissingSpaces() {
                   <h3 className="font-serif font-bold text-lg leading-tight mb-1 whitespace-pre-wrap">早期中国</h3>
                   <p className="font-mono text-[10px] text-ink/60 mb-2 uppercase tracking-widest">人民大学出版社</p>
                 </div>
-                <div className="font-sans text-[10px] uppercase tracking-wider text-ink/50 border-t border-ink/10 pt-2 mt-auto leading-relaxed">
-                  哈佛、耶鲁、普林斯顿、宾夕法尼亚、斯坦福等
+                <div>
+                  <div className="font-sans text-[10px] uppercase tracking-wider text-ink/50 border-t border-ink/10 pt-2 leading-relaxed mb-2">
+                    哈佛、耶鲁、普林斯顿、宾夕法尼亚、斯坦福等
+                  </div>
+                  <button onClick={() => setPreviewBook('early-china')} className="font-mono text-[9px] uppercase tracking-widest text-accent border border-accent/30 px-2 py-1 hover:bg-accent hover:text-white transition-colors duration-300">
+                    📄 Document Preview
+                  </button>
                 </div>
               </div>
             </div>
@@ -330,8 +354,13 @@ function checkMissingSpaces() {
                   <h3 className="font-serif font-bold text-lg leading-tight mb-1 whitespace-pre-wrap">号角—红色印刷记忆</h3>
                   <p className="font-mono text-[10px] text-ink/60 mb-2 uppercase tracking-widest">江西人民出版社</p>
                 </div>
-                <div className="font-sans text-[10px] uppercase tracking-wider text-ink/50 border-t border-ink/10 pt-2 mt-auto leading-relaxed">
-                  哈佛、达特茅斯、纽约、芝加哥、宾夕法尼亚等
+                <div>
+                  <div className="font-sans text-[10px] uppercase tracking-wider text-ink/50 border-t border-ink/10 pt-2 leading-relaxed mb-2">
+                    哈佛、达特茅斯、纽约、芝加哥、宾夕法尼亚等
+                  </div>
+                  <button onClick={() => setPreviewBook('haojiao')} className="font-mono text-[9px] uppercase tracking-widest text-accent border border-accent/30 px-2 py-1 hover:bg-accent hover:text-white transition-colors duration-300">
+                    📄 Document Preview
+                  </button>
                 </div>
               </div>
             </div>
@@ -346,8 +375,13 @@ function checkMissingSpaces() {
                   <h3 className="font-serif font-bold text-lg leading-tight mb-1 whitespace-pre-wrap">世界文学之都：南京</h3>
                   <p className="font-mono text-[10px] text-ink/60 mb-2 uppercase tracking-widest">南京出版社</p>
                 </div>
-                <div className="font-sans text-[10px] uppercase tracking-wider text-ink/50 border-t border-ink/10 pt-2 mt-auto leading-relaxed">
-                  哈佛大学、普林斯顿大学、哥伦比亚大学、费城免费图书馆、旧金山公共图书馆等
+                <div>
+                  <div className="font-sans text-[10px] uppercase tracking-wider text-ink/50 border-t border-ink/10 pt-2 leading-relaxed mb-2">
+                    哈佛大学、普林斯顿大学、哥伦比亚大学、费城免费图书馆、旧金山公共图书馆等
+                  </div>
+                  <button onClick={() => setPreviewBook('nanjing')} className="font-mono text-[9px] uppercase tracking-widest text-accent border border-accent/30 px-2 py-1 hover:bg-accent hover:text-white transition-colors duration-300">
+                    📄 Document Preview
+                  </button>
                 </div>
               </div>
             </div>
@@ -603,6 +637,87 @@ function checkMissingSpaces() {
             <span>Cross-cultural Communication</span>
           </div>
         </div>
+
+        {/* PDF Preview Modal */}
+        <AnimatePresence>
+          {previewBook && previewData[previewBook] && (
+            <motion.div
+              key="preview-modal"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 z-[100] bg-ink/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
+              onClick={() => setPreviewBook(null)}
+            >
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.95, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="bg-paper w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl border border-ink/20 relative"
+                onClick={(e: React.MouseEvent) => e.stopPropagation()}
+              >
+                {/* Modal Header */}
+                <div className="sticky top-0 z-10 bg-paper border-b border-ink/20 flex items-center justify-between px-4 md:px-6 py-3">
+                  <div className="font-mono text-xs uppercase tracking-widest text-ink/70">
+                    {previewBook === 'early-china' ? '早期中国 — 内文预览' :
+                     previewBook === 'haojiao' ? '号角 — 内文预览' : '南京 — 内文预览'}
+                  </div>
+                  <button
+                    onClick={() => setPreviewBook(null)}
+                    className="font-mono text-xs text-ink/50 hover:text-accent transition-colors border border-ink/20 px-3 py-1 hover:border-accent"
+                  >
+                    ✕ Close
+                  </button>
+                </div>
+
+                {/* Preview Content */}
+                <div className="p-4 md:p-6 space-y-8">
+                  {previewData[previewBook].map((section, si) => (
+                    <div key={si}>
+                      <div className="flex items-center gap-3 mb-3 border-b border-ink/10 pb-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                        <h4 className="font-mono text-xs uppercase tracking-widest text-ink/70 font-semibold">
+                          {section.label}
+                        </h4>
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {section.images.map((img, ii) => (
+                          <a
+                            key={ii}
+                            href={imgUrl(img)}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="border border-ink/20 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow group/img"
+                          >
+                            <img
+                              src={imgUrl(img)}
+                              alt={`${section.label} page ${ii + 1}`}
+                              className="w-full h-auto object-contain group-hover/img:scale-[1.02] transition-transform duration-500"
+                              loading="lazy"
+                            />
+                            <div className="font-mono text-[9px] text-ink/40 text-center py-1 border-t border-ink/10">
+                              Click to open full size · Page {ii + 1}
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Modal Footer */}
+                <div className="sticky bottom-0 bg-paper border-t border-ink/20 px-4 md:px-6 py-3 flex justify-between items-center font-mono text-[10px] text-ink/40">
+                  <span>End of Preview</span>
+                  <button onClick={() => setPreviewBook(null)} className="text-accent hover:text-ink transition-colors uppercase tracking-widest">
+                    ✕ Close
+                  </button>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
