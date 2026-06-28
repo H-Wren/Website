@@ -32,7 +32,7 @@ export default function App() {
 
   const previewData: Record<string, { label: string; images: string[] }[]> = {
     'early-china': [
-      { label: 'Contents', images: ['early-china-contents-1.png', 'early-china-contents-2.png', 'early-china-contents-3.png'] },
+      { label: 'Contents', images: ['early-china-contents-1.png', 'early-china-contents-2.png'] },
       { label: 'List of Figures', images: ['early-china-figures-1.png', 'early-china-figures-2.png'] },
       { label: 'List of Tables', images: ['early-china-tables-1.png'] },
       { label: 'Foreword', images: ['early-china-foreword-1.png', 'early-china-foreword-2.png', 'early-china-foreword-3.png', 'early-china-foreword-4.png'] },
