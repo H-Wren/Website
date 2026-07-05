@@ -564,7 +564,7 @@ function checkMissingSpaces() {
               <div className="lg:col-span-2">
                 <div className="polaroid p-2 pb-8">
                   <div className="relative overflow-hidden bg-white">
-                    <video src="https://raw.githubusercontent.com/H-Wren/Website/main/public/vibecho-demo.mp4" controls preload="metadata" playsInline className="w-full aspect-video object-cover bg-ink/5 block">
+                    <video src={assetPath('vibecho-demo.mp4')} controls preload="metadata" playsInline className="w-full aspect-video object-cover bg-ink/5 block">
                       Your browser does not support video playback.
                     </video>
                   </div>
